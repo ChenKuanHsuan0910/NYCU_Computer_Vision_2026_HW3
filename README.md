@@ -92,7 +92,7 @@ sbatch slurm_hw3_train.sh train_all
 
 ### Inference
 
-Run inference with 2× TTA on the test set:
+Run inference with 4× flip-based TTA on the test set:
 
 ```bash
 python hw3_maskrcnn.py \
@@ -129,8 +129,8 @@ The output `submission.zip` will be located in `--output_dir`.
 
 | Setting | AP50 |
 |---|---|
-| Baseline (150 epochs, 2× TTA) | 0.4468 |
+| Baseline (150 epochs, 4× flip-based TTA) | 0.4468 |
 | 200 epochs, multi-scale, strong aug (no TTA) | 0.4451 |
-| **200 epochs, multi-scale, strong aug + 2× TTA** | **0.5061** |
+| **200 epochs, multi-scale, strong aug + 4× flip-based TTA** | **0.5061** |
 
 
